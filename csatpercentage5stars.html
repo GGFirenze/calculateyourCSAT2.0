@@ -68,6 +68,7 @@ amplitude.init('54b017196da04bf7e947809fd2a8c275', {
     // Track the link click event with Amplitude and pass additional properties
     amplitude.getInstance().logEvent('1_selected', {debug: true})
        var eventProperties = {
+      source: "trad_5star_calc";
       value: this.value
     };
 
@@ -87,6 +88,7 @@ amplitude.init('54b017196da04bf7e947809fd2a8c275', {
     // Track the link click event with Amplitude and pass additional properties
     amplitude.getInstance().logEvent('2_selected', {debug: true})
        var eventProperties = {
+      source: "trad_5star_calc";
       value: this.value
     };
 
@@ -106,6 +108,7 @@ amplitude.init('54b017196da04bf7e947809fd2a8c275', {
     // Track the link click event with Amplitude and pass additional properties
     amplitude.getInstance().logEvent('3_selected', {debug: true})
        var eventProperties = {
+      source: "trad_5star_calc";
       value: this.value
     };
 
@@ -125,6 +128,7 @@ amplitude.init('54b017196da04bf7e947809fd2a8c275', {
     // Track the link click event with Amplitude and pass additional properties
     amplitude.getInstance().logEvent('4_selected', {debug: true})
        var eventProperties = {
+      source: "trad_5star_calc";
       value: this.value
     };
 
@@ -144,6 +148,7 @@ amplitude.init('54b017196da04bf7e947809fd2a8c275', {
     // Track the link click event with Amplitude and pass additional properties
     amplitude.getInstance().logEvent('5_selected', {debug: true})
        var eventProperties = {
+      source: "trad_5star_calc";
       value: this.value
     };
 
@@ -170,6 +175,7 @@ amplitude.init('54b017196da04bf7e947809fd2a8c275', {
     // Track the link click event with Amplitude and pass additional properties
     amplitude.getInstance().logEvent('tot_surveys_completed', {debug: true})
        var eventProperties = {
+      source: "trad_5star_calc";
       value: this.value
     };
 
@@ -193,8 +199,12 @@ amplitude.init('54b017196da04bf7e947809fd2a8c275', {
   csat.addEventListener('click', function(event) {
     // Track the link click event with Amplitude and pass additional properties
     amplitude.getInstance().logEvent('csat_calc_clicked', {debug: true})
-
-          amplitude.track('csat_calc_clicked');
+         
+var eventProperties = {
+      source: "trad_5star_calc";
+      value: this.value
+    };
+          amplitude.track('csat_calc_clicked', eventProperties);
     });
   </script>
                 <div>
@@ -222,7 +232,10 @@ amplitude.init('54b017196da04bf7e947809fd2a8c275', {
         document.getElementById('clear').addEventListener('click', function() {
             // Call the clearScreen function when the button is clicked
             clearScreen();
-            amplitude.track('calc_restarted');
+               var eventProperties = {
+      source: "trad_5star_calc"
+    };
+            amplitude.track('calc_restarted', eventProperties);
         });
     </script>
 </div>
