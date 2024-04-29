@@ -195,7 +195,7 @@ amplitude.init('54b017196da04bf7e947809fd2a8c275', {
     amplitude.getInstance().logEvent('csat_calc_clicked', {debug: true})
          
 var eventProperties = {
-      value: this.value
+      source: "trad_5star_calc"
     };
           amplitude.track('csat_calc_clicked', eventProperties);
     });
