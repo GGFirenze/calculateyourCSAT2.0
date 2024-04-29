@@ -101,9 +101,9 @@ button:hover {
 }
 
 .homebutton {
-    position: absolute;
+    position: relative;
     right: 250px;
-    top: 750px;
+    top: 350px;
     width: 70px;
     height: 70px;
     font-size: 2rem;
